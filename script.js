@@ -1,28 +1,18 @@
-/* ================================================
-   EDIT YOUR CONTENT HERE — everything below renders
-   into the page automatically.
-   ================================================ */
 const DATA = {
   skills: [
     { title: "Front-end", level: 90, size: "span-2",
-      items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind"] },
-    { title: "Back-end", level: 70, items: ["Node.js", "Express", "PostgreSQL", "REST"] },
-    { title: "Tools", level: 80, items: ["Git", "Figma", "Vite", "Docker"] },
+      items: ["HTML", "CSS", "JavaScript"] },
+    { title: "Back-end", level: 70, items: ["Python", "C++", "Java", "C#"] },
+    { title: "Tools", level: 80, items: ["Git", "Figma"] },
     { title: "Practices", level: 85, size: "span-2",
       items: ["Accessibility", "Responsive design", "Testing", "Performance", "Code review"] },
     { title: "Learning", level: 40, size: "span-2", items: ["WebGL", "Three.js", "Rust"] }
   ],
 
   projects: [
-    { title: "Tidewatch", size: "span-2", image: "images/project-1.svg",
-      text: "A live flood-alert dashboard for coastal barangays, with map layers and SMS notifications.",
-      tags: ["React", "Node.js", "Mapbox"], live: "#", code: "#" },
-    { title: "Pantry Pal", image: "images/project-2.svg",
-      text: "Meal planner that builds a weekly menu from what's already in your kitchen.",
-      tags: ["React Native", "Firebase"], live: "#", code: "#" },
-    { title: "Routelab", image: "images/project-3.svg",
-      text: "Delivery route optimizer that cut average trip time by 18% in testing.",
-      tags: ["TypeScript", "PostgreSQL"], live: "#", code: "#" }
+    { title: "PetiProg", size: "span-2", image: "images/project-1.svg",
+      text: "An adventure educational maze game about python progamming.",
+      tags: ["C#"], live: "#", code: "#" }
   ],
 
   certs: [
@@ -35,15 +25,10 @@ const DATA = {
   ],
 
   experience: [
-    { role: "Front-End Developer", org: "BrightLoop Studio", when: "2024 – Present", size: "span-2",
-      points: ["Led the rebuild of a client dashboard, improving load time by 45%.",
-               "Introduced accessibility checks into the code review process."] },
-    { role: "Developer Intern", org: "NovaTech", when: "2023",
-      points: ["Shipped 12 UI components to the design system."] },
-    { role: "Tech Club President", org: "State University", when: "2022 – 2023",
-      points: ["Grew membership from 30 to 120 students.", "Ran 10 weekend workshops."] },
-    { role: "Mentor", org: "Code for Good PH", when: "2024 – Present", size: "span-2",
-      points: ["Guide 6 junior developers through their first open-source contributions."] }
+    { role: "President - Junior Philippine Computer Society - DWCC Chapter", org: "Private College", when: "2026 – present",
+      points: ["Grew membership from 30 to 101 students.", "Ran weekend webinars."] },
+    { role: "Secretary - Junior Philippine Computer Society - DWCC Chapter", org: "Private College", when: "2025 – 2026",
+      points: ["Processed and managed official letters for events and webinars."] }
   ]
 };
 
