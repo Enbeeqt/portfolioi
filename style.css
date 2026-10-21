@@ -1,6 +1,6 @@
 :root{
-  --navy:#083a74; --blue:#fffc8c; --sky:#ffcc4d; --purple:#ff9147; --lavender:#30afff;
-  --yellow:#cfc3f7; /* soft lavender accent */
+  --navy:#083a74; --blue:#fffc8c; --sky:#ffcc4d; --purple:#ee2269; --lavender:#e41e15;
+  --yellow:#fff449; /* soft lavender accent */
   --text:#eff1fb; --muted:#adb4cf;
   --glass:rgba(255,255,255,.07); --glass-border:rgba(255,255,255,.16);
   --radius:26px; --gap:16px;
