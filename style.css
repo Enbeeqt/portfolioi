@@ -562,3 +562,29 @@ body:has(.cert-viewer[open]) { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .cert-card:hover .cert-date, .cert-date:hover, .viewer-date:hover { transform: none; }
 }
+
+/* ---------- Certificates: glowing white date text, new hover ---------- */
+.cert-date, .viewer-date {
+  color: var(--white);
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.9), 0 0 14px rgba(255, 255, 255, 0.45);   /* glowing white text */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+              text-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hovering the card: the date lifts and tilts, and its orange border glows brighter */
+.cert-card:hover .cert-date {
+  transform: translateY(-2px) rotate(-4deg);
+  box-shadow: 0 0 18px rgba(255, 106, 19, 0.9), inset 0 0 10px rgba(255, 106, 19, 0.4);
+}
+
+/* Hovering the date: the border turns white, the orange glows around it, and the text lights up */
+.cert-date:hover, .viewer-date:hover {
+  transform: translateY(-3px) rotate(-6deg) scale(1.08);
+  border-color: var(--white);
+  background: rgba(255, 106, 19, 0.22);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 0 6px rgba(255, 255, 255, 0.7),
+    0 0 24px rgba(255, 106, 19, 1),
+    inset 0 0 12px rgba(255, 106, 19, 0.55);
+}
