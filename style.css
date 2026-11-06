@@ -588,3 +588,23 @@ body:has(.cert-viewer[open]) { overflow: hidden; }
     0 0 24px rgba(255, 106, 19, 1),
     inset 0 0 12px rgba(255, 106, 19, 0.55);
 }
+
+/* ---------- Certificates: plain white date, no glow ---------- */
+.cert-date, .viewer-date {
+  color: var(--white);
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.cert-card:hover .cert-date {
+  transform: translateY(-2px) rotate(-4deg);          /* lifts and tilts, like the tech stack logos */
+  box-shadow: none;
+}
+
+.cert-date:hover, .viewer-date:hover {
+  transform: translateY(-3px) rotate(-6deg) scale(1.08);
+  border-color: var(--orange);
+  background: rgba(255, 106, 19, 0.28);               /* soft orange fill, no glow */
+  text-shadow: none;
+  box-shadow: none;
+}
