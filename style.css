@@ -528,3 +528,37 @@ body:has(.cert-viewer[open]) { overflow: hidden; }
 .about-facts {
   display: flex; flex-direction: column; justify-content: center;   /* facts sit in the middle of the line */
 }
+
+/* ---------- Certificates: hollow glowing orange date ---------- */
+.cert-date, .viewer-date {
+  display: inline-block;
+  padding: 1px 12px;
+  background: transparent;                         /* hollow */
+  border: 2px solid var(--orange);
+  color: var(--orange);
+  font-size: 0.8rem; font-weight: 700;
+  text-shadow: 0 0 8px rgba(255, 106, 19, 0.75);   /* glowing text */
+  box-shadow:
+    0 0 10px rgba(255, 106, 19, 0.5),              /* glowing border */
+    inset 0 0 8px rgba(255, 106, 19, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, text-shadow 0.2s ease;
+}
+.viewer-date { font-size: 0.85rem; }
+
+/* Hovering the card lifts and tilts the date, like the tech stack logos */
+.cert-card:hover .cert-date {
+  transform: translateY(-2px) rotate(-4deg);
+  box-shadow: 0 0 16px rgba(255, 106, 19, 0.8), inset 0 0 10px rgba(255, 106, 19, 0.35);
+}
+
+/* Hovering the date itself: bigger tilt, a soft orange fill, and a stronger glow */
+.cert-date:hover, .viewer-date:hover {
+  transform: translateY(-3px) rotate(-6deg) scale(1.08);
+  background: rgba(255, 106, 19, 0.18);
+  text-shadow: 0 0 12px rgba(255, 106, 19, 1);
+  box-shadow: 0 0 22px rgba(255, 106, 19, 0.95), inset 0 0 12px rgba(255, 106, 19, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cert-card:hover .cert-date, .cert-date:hover, .viewer-date:hover { transform: none; }
+}
