@@ -656,7 +656,7 @@ if (certList.length && typeof HTMLDialogElement === 'function') {
 // ---------- Discourage casual inspecting ----------
 // Keep this false while you're still building, or you'll lock yourself out.
 // Change it to true right before you publish.
-const PROTECT_SITE = false;
+const PROTECT_SITE = true;
 
 if (PROTECT_SITE) {
   // Block the right-click menu
