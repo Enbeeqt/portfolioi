@@ -678,3 +678,18 @@ body:has(.cert-viewer[open]) { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .to-top, .to-top svg { animation: none; }
 }
+
+/* ---------- Contact: glowing orange ring around the black icons ---------- */
+.contact-card img {
+  box-shadow:
+    0 0 14px rgba(255, 106, 19, 0.7),                 /* glow outside the ring */
+    inset 0 0 12px 3px rgba(255, 106, 19, 0.75);      /* glow inside, around the black icon */
+  transition: box-shadow 0.25s ease;
+}
+
+.contact-card:hover img,
+.contact-card:focus-visible img {
+  box-shadow:
+    0 0 26px rgba(255, 106, 19, 1),
+    inset 0 0 18px 5px rgba(255, 106, 19, 0.95);
+}
